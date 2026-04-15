@@ -19,6 +19,10 @@ GUI launcher for the **shadPS4** emulator (CLI). Lets you manage games, set grap
 
 <img width="3440" height="1440" alt="{2D7D0E6D-118B-43A0-B15A-F3B8ED8AAC4F}" src="https://github.com/user-attachments/assets/c612f2d5-dcdf-4a96-9fbf-d45de4bcfb7d" />
 <img width="3440" height="1440" alt="{BACB7566-FBE0-48B0-99A9-7EAB78A7E63F}" src="https://github.com/user-attachments/assets/97f85e29-c9d0-4d8f-b452-08fa6148843f" />
+<img width="3440" height="1440" alt="{D779DABB-959C-4164-8216-3B294A4DD3BF}" src="https://github.com/user-attachments/assets/1cdaaeba-ccc9-4b8c-b2ba-24ace1f86356" />
+<img width="3440" height="1440" alt="{6CFB3D94-1ECE-4347-A9A6-96D9240FA715}" src="https://github.com/user-attachments/assets/5542410f-6586-44f8-acfb-888afe77b355" />
+<img width="3440" height="1440" alt="{FB1824DA-0A5D-4638-BADD-22599A0DDDDF}" src="https://github.com/user-attachments/assets/e0851e32-b82e-458e-833f-dd8c1ca0dfcf" />
+<img width="3440" height="1440" alt="{8CAB6134-932A-458E-B433-0E803243B13F}" src="https://github.com/user-attachments/assets/11ef0000-4ed7-4261-9ef1-a180b706ae80" />
 
 ## Requirements
 
