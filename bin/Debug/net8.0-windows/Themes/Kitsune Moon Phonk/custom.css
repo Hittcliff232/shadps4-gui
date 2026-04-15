@@ -1,0 +1,238 @@
+/* Kitsune Moon Phonk Theme custom CSS
+   Dark fiery orange accents, yokai demon fox vibe, huge bloody moon background.
+   Aggressive neon glow + smoke effects for phonk mood.
+*/
+
+body {
+    letter-spacing: 0.03em;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+    color: #fff8e0; /* кремово-жёлтый текст для читаемости на тёмном */
+}
+
+/* Header styling – pill-like tabs with fiery glow */
+.header-tab-block {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 0 1.5px rgba(255, 110, 0, 0.25) inset;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 28px;
+    padding: 14px 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 8, 25, 0.6);
+}
+
+.header-tab-block:hover,
+.header-tab-block.active {
+    background: rgba(255, 90, 0, 0.28);
+    border: 1px solid rgba(255, 140, 40, 0.45);
+    box-shadow: 0 12px 30px rgba(255, 80, 0, 0.35), 0 0 20px rgba(255, 110, 0, 0.4);
+}
+
+/* Settings navigation – fiery shift on hover */
+.settings-nav-btn {
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 24px 80px;
+    transition: all 0.35s ease;
+    border: 1px solid transparent;
+    display: block;
+    text-align: left;
+    background: rgba(18, 10, 30, 0.5);
+}
+
+.settings-nav-btn:hover {
+    background: rgba(255, 90, 0, 0.30);
+    border-color: rgba(255, 160, 60, 0.50);
+    padding-left: 92px;
+    box-shadow: 0 8px 20px rgba(255, 80, 0, 0.3);
+}
+
+.settings-nav-btn.active {
+    background: rgba(255, 110, 0, 0.45);
+    border-color: rgba(255, 180, 80, 0.60);
+    padding-left: 96px;
+    box-shadow: 0 10px 25px rgba(255, 90, 0, 0.45);
+}
+
+/* Section headers – glowing text with orange underline */
+.settings-section h2 {
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 28px rgba(255, 110, 0, 0.55), 2px 2px 8px rgba(0,0,0,0.7);
+    font-weight: 800;
+    font-size: 32px;
+    color: #ffe8c0;
+    border-bottom: 3px solid rgba(255, 120, 40, 0.45);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+/* Cards and panels – smoky glass with orange inset */
+.card-block {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 0 1.5px rgba(255, 110, 0, 0.20) inset;
+    border-radius: 20px;
+    background: rgba(15, 8, 28, 0.68);
+    transition: all 0.35s ease;
+}
+
+.card-block:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75), 0 0 0 2px rgba(255, 140, 40, 0.40) inset;
+    transform: translateY(-4px);
+}
+
+/* Game items – subtle fiery radial overlay */
+.game-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.game-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 25% 20%, rgba(255, 140, 40, 0.40), transparent 50%);
+    pointer-events: none;
+    opacity: 0.4;
+    transition: opacity 0.4s ease;
+}
+
+.game-item:hover::after {
+    opacity: 0.65;
+}
+
+/* Buttons (Glass style) – neon orange glow */
+.btn-glass.primary {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 22px;
+    padding: 14px 28px;
+    font-weight: 700;
+    background: rgba(255, 90, 0, 0.18);
+    border: 1px solid rgba(255, 120, 40, 0.35);
+    color: #fff8e0;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 110, 0, 0.4);
+}
+
+.btn-glass.primary:hover {
+    background: rgba(255, 110, 0, 0.40);
+    border-color: rgba(255, 160, 60, 0.60);
+    box-shadow: 0 0 25px rgba(255, 90, 0, 0.55);
+}
+
+/* Store cards and quick panel */
+.store-card {
+    backdrop-filter: blur(18px);
+}
+
+.store-card-title {
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    color: #ffe8c0;
+}
+
+.quick-panel {
+    backdrop-filter: blur(22px);
+}
+
+/* Loading screen */
+.loading-poster-frame {
+    box-shadow: 0 0 0 2px rgba(255, 140, 40, 0.30), 0 20px 45px rgba(0, 0, 0, 0.65);
+}
+
+.loading-title {
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    font-size: calc(var(--loading-title-size, 26px));
+    color: #ffaa40;
+    text-shadow: 0 0 30px rgba(255, 110, 0, 0.7);
+}
+
+/* Game info section – smoky panel with orange border */
+.game-info-content {
+    max-width: 45%;
+    background: rgba(12, 6, 25, 0.65);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 24px 32px;
+    border: 1px solid rgba(255, 120, 40, 0.35);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.game-info-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffe8c0;
+    margin-bottom: 14px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7), 0 0 20px rgba(255, 110, 0, 0.4);
+}
+
+.game-info-description {
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255, 232, 192, 0.88);
+    margin-bottom: 28px;
+}
+
+/* Game actions – spaced buttons */
+.game-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Games row / carousel – fiery scrollbar */
+.games-row {
+    display: flex;
+    gap: 26px;
+    padding: 48px 48px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: #ff6b00 rgba(20, 10, 35, 0.6);
+    align-items: flex-end;
+    min-height: 45px;
+}
+
+.games-row::-webkit-scrollbar {
+    height: 7px;
+}
+
+.games-row::-webkit-scrollbar-track {
+    background: rgba(20, 10, 35, 0.6);
+    border-radius: 12px;
+}
+
+.games-row::-webkit-scrollbar-thumb {
+    background: #ff6b00;
+    border-radius: 12px;
+}
+
+.games-row::-webkit-scrollbar-thumb:hover {
+    background: #ffaa40;
+}
+
+/* Game grid for library view */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+    gap: 28px;
+    padding: 28px 48px;
+}
+
+/* Theme selected card – strong orange glow */
+.theme-selected-card {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 0 3px rgba(255, 110, 0, 0.5) inset;
+    border: 1px solid rgba(255, 160, 60, 0.55);
+    border-radius: 20px;
+    background: rgba(20, 10, 35, 0.75);
+}

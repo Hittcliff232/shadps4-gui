@@ -1,0 +1,16 @@
+﻿{
+  "name": "shadps4launcher-store-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Store and update backend for ShadPS4Launcher",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.2",
+    "morgan": "^1.10.0"
+  }
+}

@@ -1,0 +1,202 @@
+/* Theme-level custom CSS.
+   Set "css_custom": true (or path) in theme.json to load this file. */
+
+body {
+    letter-spacing: 0.02em;
+    text-rendering: optimizeLegibility;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced header with stronger presence */
+.header-tab-block {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(120, 200, 255, 0.35) inset, 0 0 20px rgba(100, 180, 255, 0.2);
+    backdrop-filter: blur(16px);
+    background: linear-gradient(145deg, rgba(30, 60, 100, 0.25), rgba(10, 25, 45, 0.4));
+}
+
+/* Navigation buttons with smoother transitions */
+.settings-nav-btn {
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    border-width: 1px;
+    border-color: rgba(140, 210, 255, 0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.settings-nav-btn.active {
+    transform: translateX(8px);
+    background: linear-gradient(145deg, rgba(100, 180, 255, 0.3), rgba(60, 130, 240, 0.2));
+    border-color: rgba(180, 230, 255, 0.6);
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.3), 0 0 15px rgba(100, 180, 255, 0.4);
+}
+
+/* Section headers with glowing effect */
+.settings-section h2 {
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 28px rgba(100, 200, 255, 0.45), 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    background: linear-gradient(135deg, #ffffff, #b0e0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Cards with depth and glassmorphism */
+.card-block {
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(100, 190, 255, 0.25) inset, 0 0 30px rgba(80, 160, 255, 0.15);
+    background: linear-gradient(145deg, rgba(40, 70, 120, 0.25), rgba(15, 30, 55, 0.4));
+    transition: all 0.3s ease;
+}
+
+.card-block:hover {
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(140, 210, 255, 0.4) inset, 0 0 40px rgba(100, 180, 255, 0.25);
+}
+
+/* Game items with enhanced glow */
+.game-item {
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.game-item:hover {
+    transform: translateY(-4px);
+}
+
+.game-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 25% 20%, rgba(150, 220, 255, 0.45), transparent 50%);
+    pointer-events: none;
+    opacity: 0.45;
+    mix-blend-mode: overlay;
+}
+
+/* Selected theme card with premium look */
+.theme-selected-card {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(100, 200, 255, 0.4) inset, 0 0 0 4px rgba(80, 160, 240, 0.15), 0 0 40px rgba(80, 180, 255, 0.35);
+    background: linear-gradient(145deg, rgba(60, 100, 160, 0.3), rgba(20, 45, 80, 0.4));
+    transform: scale(1.02);
+}
+
+/* Primary button with bold style */
+.btn-glass.primary {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: linear-gradient(145deg, rgba(80, 160, 255, 0.3), rgba(40, 100, 200, 0.2));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(100, 200, 255, 0.5) inset, 0 0 20px rgba(80, 170, 255, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-glass.primary:hover {
+    background: linear-gradient(145deg, rgba(100, 180, 255, 0.4), rgba(60, 120, 220, 0.3));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(140, 220, 255, 0.7) inset, 0 0 30px rgba(100, 190, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+/* Store cards with refined glass */
+.store-card {
+    backdrop-filter: blur(16px);
+    background: linear-gradient(145deg, rgba(50, 85, 140, 0.25), rgba(15, 35, 60, 0.35));
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(120, 200, 255, 0.2) inset;
+    transition: all 0.3s ease;
+}
+
+.store-card:hover {
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(150, 220, 255, 0.4) inset, 0 0 30px rgba(100, 180, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.store-card-title {
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Quick panel with deeper blur */
+.quick-panel {
+    backdrop-filter: blur(22px);
+    background: linear-gradient(145deg, rgba(30, 55, 95, 0.35), rgba(10, 25, 45, 0.45));
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(120, 200, 255, 0.25) inset;
+}
+
+/* Loading poster with dramatic shadow */
+.loading-poster-frame {
+    box-shadow: 0 0 0 1px rgba(120, 200, 255, 0.3), 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 50px rgba(80, 170, 255, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.loading-title {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: calc(var(--loading-title-size, 26px) - 2px);
+    font-weight: 500;
+    text-shadow: 0 0 30px rgba(100, 200, 255, 0.6), 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Position examples with refined offsets */
+#home-header {
+    transform: translateY(-3px);
+}
+
+#home-carousel-area {
+    transform: translateY(6px);
+    margin-bottom: 10px;
+}
+
+#home-info-content {
+    max-width: 65%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+    padding: 8px 0 8px 16px;
+    border-radius: 40px 0 0 40px;
+}
+
+/* Games row with better alignment */
+.games-row {
+    align-items: flex-end;
+    gap: 16px;
+}
+
+/* Settings content with enhanced cards */
+.settings-content .card-block {
+    border-radius: calc(var(--settings-card-radius, 22px) + 4px);
+    backdrop-filter: blur(16px);
+}
+
+/* Range input with custom glow */
+input[type="range"] {
+    accent-color: #7ac7ff;
+    height: 6px;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0 0 12px #7ac7ff;
+}
+
+/* Additional refinements for better UX */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(20, 40, 60, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, #7ac7ff, #3a8fd5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(100, 180, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(145deg, #9ad7ff, #5aaff5);
+}

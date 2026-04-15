@@ -1,0 +1,217 @@
+/* Anime Dreams Theme custom CSS
+   Soft anime gradients and improved alignment.
+*/
+
+body {
+    letter-spacing: 0.02em;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+}
+
+/* Header styling */
+.header-tab-block {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(231, 138, 195, 0.2) inset;
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    padding: 12px 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-tab-block:hover,
+.header-tab-block.active {
+    background: rgba(231, 138, 195, 0.25);
+    border-color: rgba(245, 190, 230, 0.4);
+}
+
+/* Settings navigation */
+.settings-nav-btn {
+    font-weight: 500;
+    border-radius: 18px;
+    padding: 24px 80px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    border: 1px solid transparent;
+    display: block;
+    text-align: left;
+}
+
+.settings-nav-btn:hover {
+    background: rgba(231, 138, 195, 0.22);
+    border-color: rgba(245, 190, 230, 0.4);
+    padding-left: 88px; /* subtle shift instead of transform */
+}
+
+.settings-nav-btn.active {
+    background: rgba(231, 138, 195, 0.35);
+    border-color: rgba(255, 210, 240, 0.5);
+    padding-left: 92px;
+    box-shadow: 0 5px 15px rgba(231, 138, 195, 0.25);
+}
+
+/* Section headers */
+.settings-section h2 {
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 24px rgba(231, 138, 195, 0.4);
+    font-weight: 700;
+    font-size: 30px;
+    color: #f8f6ff;
+    border-bottom: 2px solid rgba(231, 138, 195, 0.4);
+    padding-bottom: 14px;
+    margin-bottom: 28px;
+}
+
+/* Cards and panels */
+.card-block {
+    backdrop-filter: blur(16px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(231, 138, 195, 0.15) inset;
+    border-radius: 18px;
+    background: rgba(20, 15, 50, 0.65);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-block:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(245, 190, 230, 0.3) inset;
+}
+
+/* Game items */
+.game-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.game-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% 16%, rgba(245, 220, 255, 0.35), transparent 40%);
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+/* Buttons (Glass style) */
+.btn-glass.primary {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-weight: 600;
+    background: rgba(231, 138, 195, 0.15);
+    border: 1px solid rgba(231, 138, 195, 0.25);
+    color: #f8f6ff;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-glass.primary:hover {
+    background: rgba(231, 138, 195, 0.3);
+    border-color: rgba(245, 190, 230, 0.5);
+}
+
+/* Store cards and quick panel */
+.store-card {
+    backdrop-filter: blur(16px);
+}
+
+.store-card-title {
+    letter-spacing: 0.02em;
+    font-weight: 600;
+}
+
+.quick-panel {
+    backdrop-filter: blur(20px);
+}
+
+.loading-poster-frame {
+    box-shadow: 0 0 0 1px rgba(200, 180, 240, 0.22), 0 18px 38px rgba(0, 0, 0, 0.48);
+}
+
+.loading-title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: calc(var(--loading-title-size, 24px) - 2px);
+}
+
+/* Game info section */
+.game-info-content {
+    max-width: 45%;
+    background: rgba(15, 12, 35, 0.6);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 22px 28px;
+    border: 1px solid rgba(231, 138, 195, 0.25);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-info-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #f8f6ff;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-info-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(248, 245, 255, 0.86);
+    margin-bottom: 24px;
+}
+
+/* Game actions */
+.game-actions {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* Games row / carousel */
+.games-row {
+    display: flex;
+    gap: 22px;
+    padding: 45px 45px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: #e78ac3 rgba(30, 25, 60, 0.5);
+    align-items: flex-end;
+    min-height: 40px;
+}
+
+.games-row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.games-row::-webkit-scrollbar-track {
+    background: rgba(30, 25, 60, 0.5);
+    border-radius: 10px;
+}
+
+.games-row::-webkit-scrollbar-thumb {
+    background: #e78ac3;
+    border-radius: 10px;
+}
+
+.games-row::-webkit-scrollbar-thumb:hover {
+    background: #f1a4d5;
+}
+
+/* Game grid for library view */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 25px;
+    padding: 25px 45px;
+}
+
+/* Theme selected card */
+.theme-selected-card {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 0 2px #e78ac3 inset;
+    border: 1px solid rgba(245, 190, 230, 0.4);
+    border-radius: 18px;
+}

@@ -1,0 +1,29 @@
+<Window x:Class="ShadPS4Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="ShadPS4 Launcher by Hittcliff"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Topmost="False">
+
+    <Grid>
+        <wv2:WebView2 x:Name="WebView"/>
+        <Border x:Name="InAppBrowserHost"
+                Visibility="Collapsed"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="1200"
+                Height="700"
+                Margin="0"
+                CornerRadius="14"
+                BorderThickness="1"
+                BorderBrush="#445A7A"
+                Background="#0B111B"
+                ClipToBounds="True">
+            <wv2:WebView2 x:Name="InAppBrowserView"/>
+        </Border>
+    </Grid>
+</Window>

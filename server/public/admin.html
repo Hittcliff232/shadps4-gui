@@ -1,0 +1,1036 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-0: #0a101a;
+      --bg-1: #101b2e;
+      --ink: #f4f8ff;
+      --ink-dim: rgba(222, 233, 252, 0.72);
+      --line: rgba(170, 203, 255, 0.18);
+      --line-strong: rgba(172, 217, 255, 0.42);
+      --card: rgba(14, 24, 40, 0.78);
+      --card-soft: rgba(10, 18, 32, 0.72);
+      --ok: #6ee7b7;
+      --warn: #fbbf24;
+      --danger: #f87171;
+      --accent: #7dd3fc;
+      --radius: 18px;
+      --radius-sm: 12px;
+      --shadow: 0 24px 48px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 90% -10%, rgba(54, 114, 255, 0.18), transparent 70%),
+        radial-gradient(900px 420px at -10% 110%, rgba(38, 194, 255, 0.16), transparent 72%),
+        linear-gradient(140deg, var(--bg-0), var(--bg-1));
+      padding: 28px;
+    }
+
+    .shell {
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .topbar {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(24px, 2.8vw, 36px);
+      letter-spacing: 0.01em;
+    }
+
+    .brand .hint {
+      margin: 3px 0 0;
+      color: var(--ink-dim);
+      font-size: 13px;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      color: var(--ink-dim);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toolbar label {
+      font-size: 12px;
+      color: var(--ink-dim);
+      font-family: "IBM Plex Mono", monospace;
+      display: grid;
+      gap: 6px;
+    }
+
+    input[type="text"], input[type="file"], textarea, select {
+      width: 100%;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(6, 12, 24, 0.8);
+      padding: 10px 12px;
+      font: 14px/1.3 "Space Grotesk", "Segoe UI", sans-serif;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    textarea { min-height: 92px; resize: vertical; }
+
+    input[type="text"]:focus,
+    input[type="file"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--line-strong);
+      box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.15);
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(24, 47, 78, 0.72);
+      color: var(--ink);
+      padding: 10px 14px;
+      font: 500 13px/1 "Space Grotesk", sans-serif;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+      background: rgba(38, 73, 118, 0.85);
+    }
+
+    .btn.primary {
+      background: linear-gradient(140deg, rgba(66, 133, 244, 0.85), rgba(36, 177, 255, 0.9));
+      border-color: rgba(165, 220, 255, 0.66);
+      color: #03111d;
+    }
+
+    .btn.warn {
+      background: rgba(90, 64, 10, 0.8);
+      border-color: rgba(251, 191, 36, 0.45);
+    }
+
+    .btn.danger {
+      background: rgba(94, 26, 26, 0.8);
+      border-color: rgba(248, 113, 113, 0.45);
+    }
+
+    .status {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--card-soft);
+      padding: 10px 12px;
+      font: 13px/1.35 "IBM Plex Mono", monospace;
+      color: var(--ink-dim);
+    }
+
+    .status.ok { border-color: rgba(110, 231, 183, 0.38); color: #bbf7d0; }
+    .status.warn { border-color: rgba(251, 191, 36, 0.38); color: #fde68a; }
+    .status.error { border-color: rgba(248, 113, 113, 0.38); color: #fecaca; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 1140px) {
+      .grid {
+        grid-template-columns: 1.3fr 1.3fr 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+      min-height: 280px;
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .panel-sub {
+      margin: -4px 0 0;
+      color: var(--ink-dim);
+      font-size: 12px;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .list {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      overflow: auto;
+      max-height: 340px;
+      background: rgba(8, 15, 28, 0.78);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 1px solid rgba(170, 203, 255, 0.12);
+      vertical-align: top;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 31, 52, 0.98);
+      z-index: 1;
+      color: #d8e8ff;
+    }
+
+    td.actions {
+      white-space: nowrap;
+    }
+
+    .btn-mini {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(18, 36, 59, 0.84);
+      color: var(--ink);
+      cursor: pointer;
+      font: 600 11px/1 "IBM Plex Mono", monospace;
+      padding: 5px 9px;
+      margin-right: 6px;
+    }
+
+    .btn-mini:last-child { margin-right: 0; }
+    .btn-mini:hover { border-color: var(--line-strong); }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .form-grid .full { grid-column: 1 / -1; }
+
+    .form-grid label {
+      display: grid;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--ink-dim);
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .inline-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .downloads {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(8, 15, 28, 0.78);
+      max-height: 280px;
+      overflow: auto;
+      font: 12px/1.3 "IBM Plex Mono", monospace;
+      padding: 8px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .download-item {
+      border: 1px solid rgba(170, 203, 255, 0.14);
+      border-radius: 10px;
+      padding: 8px;
+      display: grid;
+      gap: 6px;
+      background: rgba(12, 24, 42, 0.7);
+    }
+
+    .download-item code {
+      font-family: "IBM Plex Mono", monospace;
+      color: #d8efff;
+      word-break: break-all;
+    }
+
+    .download-meta {
+      color: var(--ink-dim);
+      font-size: 11px;
+    }
+
+    .muted { color: var(--ink-dim); }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="topbar">
+      <div class="brand">
+        <div>
+          <h1>Store Admin Console</h1>
+          <p class="hint">Manage catalog, emulator builds, launcher update manifest and downloads index.</p>
+        </div>
+        <div class="badge" id="server-badge">Server: -</div>
+      </div>
+
+      <div class="toolbar">
+        <label>
+          Admin token
+          <input id="admin-token" type="text" placeholder="Set ADMIN_TOKEN in server env (optional)" />
+        </label>
+        <button class="btn" id="save-token-btn" type="button">Save Token</button>
+        <button class="btn" id="reload-btn" type="button">Reload Data</button>
+        <button class="btn primary" id="open-store-btn" type="button">Open Store API</button>
+      </div>
+
+      <div id="status" class="status">Ready.</div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Catalog Items</h2>
+        <p class="panel-sub">These entries are returned from <code>/api/catalog</code>.</p>
+
+        <div class="list">
+          <table>
+            <thead>
+              <tr>
+                <th style="min-width:120px">ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Version</th>
+                <th>URL</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="catalog-body"></tbody>
+          </table>
+        </div>
+
+        <form id="catalog-form" class="form-grid" autocomplete="off">
+          <label>
+            ID
+            <input id="cat-id" type="text" required />
+          </label>
+          <label>
+            Type
+            <select id="cat-type">
+              <option value="theme">theme</option>
+              <option value="soundpack">soundpack</option>
+              <option value="emulator">emulator</option>
+              <option value="launcher_update">launcher_update</option>
+              <option value="file">file</option>
+            </select>
+          </label>
+          <label class="full">
+            Name
+            <input id="cat-name" type="text" required />
+          </label>
+          <label>
+            Version
+            <input id="cat-version" type="text" />
+          </label>
+          <label>
+            Target subdir
+            <input id="cat-subdir" type="text" />
+          </label>
+          <label class="full">
+            Download URL
+            <input id="cat-url" type="text" required />
+          </label>
+          <label class="full">
+            Description
+            <textarea id="cat-description"></textarea>
+          </label>
+          <label class="full">
+            <input id="cat-extract" type="checkbox" checked /> Extract archive
+          </label>
+          <div class="inline-actions full">
+            <button class="btn primary" type="submit" id="cat-save-btn">Create Item</button>
+            <button class="btn" type="button" id="cat-reset-btn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Emulator Versions</h2>
+        <p class="panel-sub">These entries are returned from <code>/api/emulator/versions</code>.</p>
+
+        <div class="list">
+          <table>
+            <thead>
+              <tr>
+                <th style="min-width:120px">ID</th>
+                <th>Name</th>
+                <th>Version</th>
+                <th>URL</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="emu-body"></tbody>
+          </table>
+        </div>
+
+        <form id="emu-form" class="form-grid" autocomplete="off">
+          <label>
+            ID
+            <input id="emu-id" type="text" required />
+          </label>
+          <label>
+            Version
+            <input id="emu-version" type="text" required />
+          </label>
+          <label class="full">
+            Name
+            <input id="emu-name" type="text" required />
+          </label>
+          <label>
+            Target subdir
+            <input id="emu-subdir" type="text" />
+          </label>
+          <label>
+            <input id="emu-extract" type="checkbox" checked /> Extract archive
+          </label>
+          <label class="full">
+            Download URL
+            <input id="emu-url" type="text" required />
+          </label>
+          <label class="full">
+            Notes
+            <textarea id="emu-notes"></textarea>
+          </label>
+          <div class="inline-actions full">
+            <button class="btn primary" type="submit" id="emu-save-btn">Create Version</button>
+            <button class="btn" type="button" id="emu-reset-btn">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Launcher Update + Files</h2>
+        <p class="panel-sub">Controls <code>/api/launcher/version</code> and current <code>/downloads</code> files.</p>
+
+        <div>
+          <strong>Quick ZIP Upload</strong>
+          <p class="muted" style="margin:4px 0 8px">Upload archive to <code>/downloads</code> and optionally create a catalog item automatically.</p>
+          <form id="upload-form" class="form-grid" autocomplete="off">
+            <label class="full">
+              ZIP file
+              <input id="upload-file" type="file" accept=".zip,.7z,.rar,.tar,.gz,.pkg,.exe" required />
+            </label>
+            <label>
+              Downloads subfolder
+              <input id="upload-folder" type="text" value="uploads" />
+            </label>
+            <label>
+              Store type
+              <select id="upload-type">
+                <option value="theme">theme</option>
+                <option value="soundpack">soundpack</option>
+                <option value="emulator">emulator</option>
+                <option value="launcher_update">launcher_update</option>
+                <option value="file">file</option>
+              </select>
+            </label>
+            <label>
+              Item ID
+              <input id="upload-id" type="text" placeholder="auto from filename" />
+            </label>
+            <label>
+              Name
+              <input id="upload-name" type="text" placeholder="auto from filename" />
+            </label>
+            <label>
+              Version
+              <input id="upload-version" type="text" />
+            </label>
+            <label>
+              Target subdir
+              <input id="upload-subdir" type="text" />
+            </label>
+            <label class="full">
+              Description
+              <textarea id="upload-description"></textarea>
+            </label>
+            <label>
+              <input id="upload-add-catalog" type="checkbox" checked /> Add item to catalog
+            </label>
+            <label>
+              <input id="upload-extract" type="checkbox" checked /> Extract archive on install
+            </label>
+            <div class="inline-actions full">
+              <button class="btn primary" type="submit">Upload ZIP</button>
+            </div>
+          </form>
+        </div>
+
+        <form id="launcher-form" class="form-grid" autocomplete="off">
+          <label class="full">
+            Launcher version
+            <input id="launcher-version" type="text" required />
+          </label>
+          <label class="full">
+            Download URL
+            <input id="launcher-url" type="text" required />
+          </label>
+          <label class="full">
+            Release notes
+            <textarea id="launcher-notes"></textarea>
+          </label>
+          <div class="inline-actions full">
+            <button class="btn primary" type="submit">Save Launcher Manifest</button>
+          </div>
+        </form>
+
+        <div>
+          <strong>Downloads index</strong>
+          <p class="muted" style="margin:4px 0 8px">Click Copy URL to reuse path in forms.</p>
+          <div class="downloads" id="downloads-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const state = {
+        token: localStorage.getItem('store_admin_token') || '',
+        tokenRequired: false,
+        catalog: [],
+        emulatorVersions: [],
+        launcherVersion: { version: '', downloadUrl: '', notes: '' },
+        downloads: []
+      };
+
+      let catalogEditId = '';
+      let emulatorEditId = '';
+
+      const el = {
+        status: document.getElementById('status'),
+        serverBadge: document.getElementById('server-badge'),
+        token: document.getElementById('admin-token'),
+        catalogBody: document.getElementById('catalog-body'),
+        emuBody: document.getElementById('emu-body'),
+        downloadsList: document.getElementById('downloads-list'),
+        catForm: document.getElementById('catalog-form'),
+        emuForm: document.getElementById('emu-form'),
+        uploadForm: document.getElementById('upload-form'),
+        launcherForm: document.getElementById('launcher-form')
+      };
+
+      function setStatus(text, kind) {
+        el.status.textContent = text;
+        el.status.className = `status${kind ? ` ${kind}` : ''}`;
+      }
+
+      function setServerBadge() {
+        el.serverBadge.textContent = `Server: ${window.location.origin}`;
+      }
+
+      function toPayloadError(res, fallback) {
+        if (!res) return fallback;
+        if (typeof res.error === 'string' && res.error.trim()) return res.error.trim();
+        if (typeof res.message === 'string' && res.message.trim()) return res.message.trim();
+        return fallback;
+      }
+
+      function toSlug(value) {
+        return String(value || '')
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+/, '')
+          .replace(/-+$/, '')
+          .slice(0, 80);
+      }
+
+      function filenameStem(value) {
+        const full = String(value || '').split(/[\\/]/).pop() || '';
+        return full.replace(/\.[^/.]+$/, '');
+      }
+
+      async function api(url, options = {}) {
+        const init = { method: 'GET', ...options };
+        const headers = { ...(options.headers || {}) };
+
+        if (state.token) headers['x-admin-token'] = state.token;
+        if (init.body && !(init.body instanceof FormData)) {
+          headers['Content-Type'] = 'application/json';
+        }
+
+        init.headers = headers;
+        const response = await fetch(url, init);
+        let payload = null;
+        try {
+          payload = await response.json();
+        } catch (_err) {
+          payload = null;
+        }
+
+        if (!response.ok || (payload && payload.success === false)) {
+          const fallback = `HTTP ${response.status}`;
+          throw new Error(toPayloadError(payload, fallback));
+        }
+
+        return payload || {};
+      }
+
+      function fillCatalogForm(item) {
+        document.getElementById('cat-id').value = item ? (item.id || '') : '';
+        document.getElementById('cat-type').value = item ? (item.type || 'theme') : 'theme';
+        document.getElementById('cat-name').value = item ? (item.name || '') : '';
+        document.getElementById('cat-version').value = item ? (item.version || '') : '';
+        document.getElementById('cat-subdir').value = item ? (item.targetSubdir || '') : '';
+        document.getElementById('cat-url').value = item ? (item.downloadUrl || '') : '';
+        document.getElementById('cat-description').value = item ? (item.description || '') : '';
+        document.getElementById('cat-extract').checked = item ? (item.extract !== false) : true;
+        document.getElementById('cat-save-btn').textContent = item ? 'Save Item' : 'Create Item';
+      }
+
+      function resetCatalogForm() {
+        catalogEditId = '';
+        fillCatalogForm(null);
+      }
+
+      function fillEmuForm(item) {
+        document.getElementById('emu-id').value = item ? (item.id || '') : '';
+        document.getElementById('emu-version').value = item ? (item.version || '') : '';
+        document.getElementById('emu-name').value = item ? (item.name || '') : '';
+        document.getElementById('emu-subdir').value = item ? (item.targetSubdir || '') : '';
+        document.getElementById('emu-url').value = item ? (item.downloadUrl || '') : '';
+        document.getElementById('emu-notes').value = item ? (item.notes || '') : '';
+        document.getElementById('emu-extract').checked = item ? (item.extract !== false) : true;
+        document.getElementById('emu-save-btn').textContent = item ? 'Save Version' : 'Create Version';
+      }
+
+      function resetEmuForm() {
+        emulatorEditId = '';
+        fillEmuForm(null);
+      }
+
+      function fillLauncherForm(item) {
+        document.getElementById('launcher-version').value = item && item.version ? item.version : '';
+        document.getElementById('launcher-url').value = item && item.downloadUrl ? item.downloadUrl : '';
+        document.getElementById('launcher-notes').value = item && item.notes ? item.notes : '';
+      }
+
+      function createActionButton(label, onClick, className = '') {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `btn-mini ${className}`.trim();
+        btn.textContent = label;
+        btn.addEventListener('click', onClick);
+        return btn;
+      }
+
+      function renderCatalog() {
+        el.catalogBody.innerHTML = '';
+        state.catalog.forEach((item) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${item.id || ''}</td>
+            <td>${item.name || ''}</td>
+            <td>${item.type || ''}</td>
+            <td>${item.version || ''}</td>
+            <td style="word-break:break-all">${item.downloadUrl || ''}</td>
+            <td class="actions"></td>
+          `;
+
+          const actions = tr.querySelector('.actions');
+          actions.appendChild(createActionButton('Edit', () => {
+            catalogEditId = item.id || '';
+            fillCatalogForm(item);
+            setStatus(`Editing catalog item: ${catalogEditId}`, 'warn');
+          }));
+
+          actions.appendChild(createActionButton('Delete', async () => {
+            if (!confirm(`Delete catalog item "${item.id}"?`)) return;
+            try {
+              await api(`/api/admin/catalog/items/${encodeURIComponent(item.id || '')}`, { method: 'DELETE' });
+              await reloadState();
+              setStatus(`Deleted catalog item: ${item.id}`, 'ok');
+            } catch (err) {
+              setStatus(`Catalog delete failed: ${err.message}`, 'error');
+            }
+          }, 'danger'));
+
+          el.catalogBody.appendChild(tr);
+        });
+      }
+
+      function renderEmuVersions() {
+        el.emuBody.innerHTML = '';
+        state.emulatorVersions.forEach((item) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${item.id || ''}</td>
+            <td>${item.name || ''}</td>
+            <td>${item.version || ''}</td>
+            <td style="word-break:break-all">${item.downloadUrl || ''}</td>
+            <td class="actions"></td>
+          `;
+
+          const actions = tr.querySelector('.actions');
+          actions.appendChild(createActionButton('Edit', () => {
+            emulatorEditId = item.id || '';
+            fillEmuForm(item);
+            setStatus(`Editing emulator build: ${emulatorEditId}`, 'warn');
+          }));
+
+          actions.appendChild(createActionButton('Delete', async () => {
+            if (!confirm(`Delete emulator build "${item.id}"?`)) return;
+            try {
+              await api(`/api/admin/emulator/versions/${encodeURIComponent(item.id || '')}`, { method: 'DELETE' });
+              await reloadState();
+              setStatus(`Deleted emulator build: ${item.id}`, 'ok');
+            } catch (err) {
+              setStatus(`Emulator delete failed: ${err.message}`, 'error');
+            }
+          }, 'danger'));
+
+          el.emuBody.appendChild(tr);
+        });
+      }
+
+      async function copyText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          setStatus(`Copied: ${text}`, 'ok');
+        } catch (_err) {
+          setStatus('Clipboard permission denied. Copy manually.', 'warn');
+        }
+      }
+
+      function renderDownloads() {
+        el.downloadsList.innerHTML = '';
+        if (!state.downloads.length) {
+          const empty = document.createElement('div');
+          empty.className = 'muted';
+          empty.textContent = 'No files in /downloads.';
+          el.downloadsList.appendChild(empty);
+          return;
+        }
+
+        state.downloads.forEach((entry) => {
+          const row = document.createElement('div');
+          row.className = 'download-item';
+          row.innerHTML = `
+            <code>${entry.downloadUrl || ''}</code>
+            <div class="download-meta">${entry.file || ''} | ${entry.sizeBytes || 0} bytes | ${entry.modifiedUtc || ''}</div>
+          `;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn-mini';
+          btn.textContent = 'Copy URL';
+          btn.addEventListener('click', () => copyText(entry.downloadUrl || ''));
+          const useBtn = document.createElement('button');
+          useBtn.type = 'button';
+          useBtn.className = 'btn-mini';
+          useBtn.textContent = 'Use in Catalog';
+          useBtn.addEventListener('click', () => {
+            const stem = filenameStem(entry.file || '');
+            fillCatalogForm({
+              id: toSlug(stem) || `item-${Date.now()}`,
+              type: 'file',
+              name: stem || 'Store item',
+              version: '',
+              targetSubdir: '',
+              downloadUrl: entry.downloadUrl || '',
+              description: '',
+              extract: true
+            });
+            catalogEditId = '';
+            setStatus(`Catalog form filled from: ${entry.file || entry.downloadUrl || 'download'}`, 'ok');
+          });
+          row.appendChild(btn);
+          row.appendChild(useBtn);
+          el.downloadsList.appendChild(row);
+        });
+      }
+
+      function renderAll() {
+        renderCatalog();
+        renderEmuVersions();
+        fillLauncherForm(state.launcherVersion);
+        renderDownloads();
+      }
+
+      async function loadConfig() {
+        const cfg = await api('/api/admin/config');
+        state.tokenRequired = !!cfg.tokenRequired;
+      }
+
+      async function reloadState() {
+        const payload = await api('/api/admin/state');
+        state.catalog = Array.isArray(payload.catalog && payload.catalog.items) ? payload.catalog.items : [];
+        state.emulatorVersions = Array.isArray(payload.emulatorVersions && payload.emulatorVersions.versions)
+          ? payload.emulatorVersions.versions
+          : [];
+        state.launcherVersion = payload.launcherVersion || { version: '', downloadUrl: '', notes: '' };
+        state.downloads = Array.isArray(payload.downloads) ? payload.downloads : [];
+        renderAll();
+      }
+
+      async function bootstrap() {
+        el.token.value = state.token;
+        setServerBadge();
+
+        try {
+          await loadConfig();
+          if (state.tokenRequired && !state.token) {
+            setStatus('Admin token is required. Enter token and click Save Token.', 'warn');
+            return;
+          }
+
+          await reloadState();
+          setStatus('Admin data loaded.', 'ok');
+        } catch (err) {
+          setStatus(`Load failed: ${err.message}`, 'error');
+        }
+      }
+
+      document.getElementById('save-token-btn').addEventListener('click', async () => {
+        state.token = el.token.value.trim();
+        localStorage.setItem('store_admin_token', state.token);
+        try {
+          await loadConfig();
+          if (state.tokenRequired && !state.token) {
+            setStatus('Token is required by server.', 'warn');
+            return;
+          }
+          await reloadState();
+          setStatus('Token saved and data reloaded.', 'ok');
+        } catch (err) {
+          setStatus(`Token accepted? Request failed: ${err.message}`, 'error');
+        }
+      });
+
+      document.getElementById('reload-btn').addEventListener('click', async () => {
+        try {
+          await reloadState();
+          setStatus('Data refreshed.', 'ok');
+        } catch (err) {
+          setStatus(`Refresh failed: ${err.message}`, 'error');
+        }
+      });
+
+      document.getElementById('open-store-btn').addEventListener('click', () => {
+        window.open('/api/catalog', '_blank');
+      });
+
+      document.getElementById('upload-file').addEventListener('change', () => {
+        const input = document.getElementById('upload-file');
+        const file = input.files && input.files[0];
+        if (!file) return;
+        const stem = filenameStem(file.name);
+        const idEl = document.getElementById('upload-id');
+        const nameEl = document.getElementById('upload-name');
+        if (!idEl.value.trim()) idEl.value = toSlug(stem);
+        if (!nameEl.value.trim()) nameEl.value = stem;
+      });
+
+      document.getElementById('cat-reset-btn').addEventListener('click', () => {
+        resetCatalogForm();
+        setStatus('Catalog form reset.', 'warn');
+      });
+
+      document.getElementById('emu-reset-btn').addEventListener('click', () => {
+        resetEmuForm();
+        setStatus('Emulator form reset.', 'warn');
+      });
+
+      el.uploadForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const fileInput = document.getElementById('upload-file');
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) {
+          setStatus('Select a ZIP archive first.', 'warn');
+          return;
+        }
+
+        const formData = new FormData();
+        formData.set('packageFile', file);
+        formData.set('folder', document.getElementById('upload-folder').value.trim());
+        formData.set('itemType', document.getElementById('upload-type').value.trim());
+        formData.set('itemId', document.getElementById('upload-id').value.trim());
+        formData.set('itemName', document.getElementById('upload-name').value.trim());
+        formData.set('itemVersion', document.getElementById('upload-version').value.trim());
+        formData.set('itemDescription', document.getElementById('upload-description').value.trim());
+        formData.set('targetSubdir', document.getElementById('upload-subdir').value.trim());
+        formData.set('extract', document.getElementById('upload-extract').checked ? 'true' : 'false');
+        formData.set('addToCatalog', document.getElementById('upload-add-catalog').checked ? 'true' : 'false');
+
+        try {
+          const payload = await api('/api/admin/uploads/package', {
+            method: 'POST',
+            body: formData
+          });
+          await reloadState();
+          if (payload && payload.item) {
+            catalogEditId = payload.item.id || '';
+            fillCatalogForm(payload.item);
+            setStatus(`Uploaded and added to catalog: ${payload.item.id || payload.item.name}`, 'ok');
+          } else if (payload && payload.file) {
+            setStatus(`Uploaded file: ${payload.file.file || payload.file.downloadUrl || file.name}`, 'ok');
+          } else {
+            setStatus(`Uploaded file: ${file.name}`, 'ok');
+          }
+          fileInput.value = '';
+        } catch (err) {
+          setStatus(`Upload failed: ${err.message}`, 'error');
+        }
+      });
+
+      el.catForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const payload = {
+          id: document.getElementById('cat-id').value.trim(),
+          type: document.getElementById('cat-type').value.trim(),
+          name: document.getElementById('cat-name').value.trim(),
+          version: document.getElementById('cat-version').value.trim(),
+          targetSubdir: document.getElementById('cat-subdir').value.trim(),
+          downloadUrl: document.getElementById('cat-url').value.trim(),
+          description: document.getElementById('cat-description').value.trim(),
+          extract: document.getElementById('cat-extract').checked
+        };
+
+        try {
+          if (catalogEditId) {
+            await api(`/api/admin/catalog/items/${encodeURIComponent(catalogEditId)}`, {
+              method: 'PUT',
+              body: JSON.stringify(payload)
+            });
+            setStatus(`Catalog item updated: ${payload.id}`, 'ok');
+          } else {
+            await api('/api/admin/catalog/items', {
+              method: 'POST',
+              body: JSON.stringify(payload)
+            });
+            setStatus(`Catalog item created: ${payload.id}`, 'ok');
+          }
+
+          await reloadState();
+          resetCatalogForm();
+        } catch (err) {
+          setStatus(`Catalog save failed: ${err.message}`, 'error');
+        }
+      });
+
+      el.emuForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const payload = {
+          id: document.getElementById('emu-id').value.trim(),
+          version: document.getElementById('emu-version').value.trim(),
+          name: document.getElementById('emu-name').value.trim(),
+          targetSubdir: document.getElementById('emu-subdir').value.trim(),
+          downloadUrl: document.getElementById('emu-url').value.trim(),
+          notes: document.getElementById('emu-notes').value.trim(),
+          extract: document.getElementById('emu-extract').checked
+        };
+
+        try {
+          if (emulatorEditId) {
+            await api(`/api/admin/emulator/versions/${encodeURIComponent(emulatorEditId)}`, {
+              method: 'PUT',
+              body: JSON.stringify(payload)
+            });
+            setStatus(`Emulator build updated: ${payload.id}`, 'ok');
+          } else {
+            await api('/api/admin/emulator/versions', {
+              method: 'POST',
+              body: JSON.stringify(payload)
+            });
+            setStatus(`Emulator build created: ${payload.id}`, 'ok');
+          }
+
+          await reloadState();
+          resetEmuForm();
+        } catch (err) {
+          setStatus(`Emulator save failed: ${err.message}`, 'error');
+        }
+      });
+
+      el.launcherForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const payload = {
+          version: document.getElementById('launcher-version').value.trim(),
+          downloadUrl: document.getElementById('launcher-url').value.trim(),
+          notes: document.getElementById('launcher-notes').value.trim()
+        };
+
+        try {
+          await api('/api/admin/launcher/version', {
+            method: 'PUT',
+            body: JSON.stringify(payload)
+          });
+          await reloadState();
+          setStatus(`Launcher manifest updated: ${payload.version}`, 'ok');
+        } catch (err) {
+          setStatus(`Launcher update save failed: ${err.message}`, 'error');
+        }
+      });
+
+      resetCatalogForm();
+      resetEmuForm();
+      bootstrap();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\runtimes\win-x86\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\runtimes\win-x64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\index.html
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\assets\.gitkeep
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\assets\README.txt
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\lang\en.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\lang\ru.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\ShadPS4 Launcher by Hittcliff.exe
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\ShadPS4 Launcher by Hittcliff.deps.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\ShadPS4 Launcher by Hittcliff.runtimeconfig.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\ShadPS4 Launcher by Hittcliff.pdb
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\Microsoft.Web.WebView2.Core.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\Microsoft.Web.WebView2.WinForms.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\Microsoft.Web.WebView2.Wpf.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\_verify\Tomlyn.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\index.html
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\assets\.gitkeep
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\assets\README.txt
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\lang\en.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\lang\ru.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\Colors.xaml
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\custom.css
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\sounds\README.txt
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\theme.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\custom.css
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\image\background.jpg
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\click.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\close.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\music.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\open.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\README.txt
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\select.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\start.mp3
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\theme.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.exe
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.deps.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.runtimeconfig.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Tomlyn.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.csproj.AssemblyReference.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\AudioWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\BrowserWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneralSettingsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GraphicsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\InputWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\LogsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\PathsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\AudioWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\BrowserWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneralSettingsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GraphicsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\InputWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\LogsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\PathsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\App.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_Content.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.lref
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\App.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.g.resources
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.AssemblyInfoInputs.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.AssemblyInfo.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.csproj.CoreCompileInputs.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4L.36B357B5.Up2Date
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\refint\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.genruntimeconfig.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ref\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\preview.html
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.csproj.AssemblyReference.cache
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\AudioWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\BrowserWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneralSettingsWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GraphicsWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\InputWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\LogsWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\MainWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\PathsWindow.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\AudioWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\BrowserWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneralSettingsWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GraphicsWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\InputWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\LogsWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\PathsWindow.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\App.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_Content.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.cache
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.lref
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\refint\ShadPS4 Launcher by Hittcliff.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\custom.css
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\theme.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\custom.css
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\theme.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\index.html
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\preview.html
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\assets\.gitkeep
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\assets\README.txt
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\lang\en.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\lang\ru.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\Colors.xaml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\default\sounds\README.txt
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\image\background.jpg
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\click.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\close.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\music.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\open.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\README.txt
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\select.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Themes\The Witcher 3\sounds\start.mp3
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.exe
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.deps.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.runtimeconfig.json
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\bin\Debug\net8.0-windows\Tomlyn.dll
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\App.baml
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4 Launcher by Hittcliff.g.resources
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.GeneratedMSBuildEditorConfig.editorconfig
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.AssemblyInfoInputs.cache
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.AssemblyInfo.cs
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.csproj.CoreCompileInputs.cache
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4L.36B357B5.Up2Date
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ShadPS4Launcher.genruntimeconfig.cache
+G:\Всё\Infamous Second Son\ShadPS4Launcher\obj\Debug\net8.0-windows\ref\ShadPS4 Launcher by Hittcliff.dll

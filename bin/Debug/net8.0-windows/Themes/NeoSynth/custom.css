@@ -1,0 +1,202 @@
+/* RPG Mystic Theme custom CSS
+   This file tweaks the appearance of buttons, tabs and panels to
+   reinforce the medieval fantasy aesthetic.  Colours have been
+   adjusted to coordinate with the palette defined in theme.json. */
+
+body {
+    letter-spacing: 0.02em;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+}
+
+/* Header styling */
+.header-tab-block {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(200, 140, 80, 0.25) inset;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.header-tab-block:hover,
+.header-tab-block.active {
+    background: rgba(200, 140, 80, 0.25);
+    border-color: rgba(220, 160, 100, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Settings navigation */
+.settings-nav-btn {
+    font-weight: 500;
+    border-radius: 16px;
+    padding: 24px 80px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.settings-nav-btn:hover {
+    background: rgba(200, 140, 80, 0.22);
+    border-color: rgba(220, 160, 100, 0.4);
+    transform: translateX(8px);
+}
+
+.settings-nav-btn.active {
+    background: rgba(200, 140, 80, 0.3);
+    border-color: rgba(230, 170, 110, 0.5);
+    transform: translateX(12px);
+    box-shadow: 0 5px 15px rgba(200, 140, 80, 0.2);
+}
+
+/* Section headers */
+.settings-section h2 {
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 24px rgba(200, 140, 80, 0.3);
+    font-weight: 600;
+    font-size: 28px;
+    color: #f3f5f7;
+    border-bottom: 2px solid rgba(200, 140, 80, 0.4);
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+/* Cards and panels */
+.card-block {
+    backdrop-filter: blur(14px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(200, 140, 80, 0.15) inset;
+    border-radius: 16px;
+    background: rgba(15, 25, 20, 0.65);
+    transition: all 0.3s ease;
+}
+
+.card-block:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(220, 160, 100, 0.3) inset;
+    transform: translateY(-3px);
+}
+
+/* Game items */
+.game-item {
+    overflow: hidden;
+}
+
+.game-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% 16%, rgba(180, 220, 200, 0.3), transparent 40%);
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.theme-selected-card {
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(140, 200, 180, 0.18) inset;
+}
+
+.btn-glass.primary {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.store-card {
+    backdrop-filter: blur(14px);
+}
+
+.store-card-title {
+    letter-spacing: 0.01em;
+}
+
+.quick-panel {
+    backdrop-filter: blur(18px);
+}
+
+.loading-poster-frame {
+    box-shadow: 0 0 0 1px rgba(140, 200, 180, 0.22), 0 18px 38px rgba(0, 0, 0, 0.48);
+}
+
+.loading-title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: calc(var(--loading-title-size, 24px) - 2px);
+}
+
+/* Game info section */
+.game-info-content {
+    max-width: 45%;
+    background: rgba(10, 16, 14, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px 25px;
+    border: 1px solid rgba(200, 140, 80, 0.25);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-info-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f3f5f7;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-info-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(240, 240, 240, 0.85);
+    margin-bottom: 20px;
+}
+
+/* Game actions */
+.game-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Games row / carousel */
+.games-row {
+    display: flex;
+    gap: 20px;
+    padding: 45px 45px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: #c8952b rgba(30, 35, 30, 0.5);
+    align-items: flex-end;
+    min-height: 22px;
+}
+
+.games-row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.games-row::-webkit-scrollbar-track {
+    background: rgba(30, 35, 30, 0.5);
+    border-radius: 10px;
+}
+
+.games-row::-webkit-scrollbar-thumb {
+    background: #c8952b;
+    border-radius: 10px;
+}
+
+.games-row::-webkit-scrollbar-thumb:hover {
+    background: #d1a24b;
+}
+
+/* Game grid for library view */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 25px;
+    padding: 25px 45px;
+}
+
+/* Theme selected card */
+.theme-selected-card {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 0 2px #c8952b inset;
+    border: 1px solid rgba(220, 160, 100, 0.4);
+}

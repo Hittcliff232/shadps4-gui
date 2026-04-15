@@ -1,0 +1,50 @@
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\index.html
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\assets\.gitkeep
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\assets\README.txt
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\lang\en.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\lang\ru.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.exe
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.deps.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.runtimeconfig.json
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Infamous Second Son\ShadPS4Launcher\bin\Release\net8.0-windows\Tomlyn.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.csproj.AssemblyReference.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\AudioWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\GeneralSettingsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\GraphicsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\InputWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\LogsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\MainWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\PathsWindow.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\Themes\Colors.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\AudioWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\GeneralSettingsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\GraphicsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\InputWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\LogsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\MainWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\PathsWindow.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\App.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff_Content.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff_MarkupCompile.lref
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\App.baml
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.g.resources
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.AssemblyInfoInputs.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.AssemblyInfo.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.csproj.CoreCompileInputs.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4L.36B357B5.Up2Date
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\refint\ShadPS4 Launcher by Hittcliff.dll
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.pdb
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ShadPS4Launcher.genruntimeconfig.cache
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\ref\ShadPS4 Launcher by Hittcliff.dll

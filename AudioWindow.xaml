@@ -1,0 +1,18 @@
+<Window x:Class="ShadPS4Launcher.AudioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Audio" Height="280" Width="380"
+        Background="{StaticResource BackgroundBrush}"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <StackPanel Margin="20">
+        <TextBlock Text="Volume (0-100)" Margin="0,0,0,4" Foreground="{StaticResource TextBrush}"/>
+        <Slider x:Name="SliderVolume" Minimum="0" Maximum="100" Value="100" Margin="0,0,0,12"/>
+        <TextBlock Text="Extra DMEM (MB, for some games)" Margin="0,0,0,4" Foreground="{StaticResource TextBrush}"/>
+        <TextBox x:Name="TbExtraDmem" Text="0" Margin="0,0,0,24"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Save" Click="BtnSave_OnClick" Padding="24,8" Margin="0,0,8,0"/>
+            <Button Content="Cancel" Click="BtnCancel_OnClick" Padding="24,8"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,20 @@
+﻿{
+  "id": "reference-theme-store",
+  "name": "Store Reference Theme",
+  "description": "Installed from built-in store package sample.",
+  "author": "Store",
+  "version": "1.0.0",
+  "css_custom": true,
+  "palette": {
+    "bg-color": "#0a0f1a",
+    "highlight": "#9de2ff",
+    "text-main": "#f4f8ff"
+  },
+  "styles": {
+    "game-card-radius": "30px",
+    "settings-card-radius": "22px"
+  },
+  "sounds": {
+    "click": "sounds/click.txt"
+  }
+}

@@ -1,0 +1,104 @@
+/* Theme-level custom CSS.
+   Set "css_custom": true (or path) in theme.json to load this file. */
+
+body {
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+}
+
+.header-tab-block {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(167, 222, 255, 0.22) inset;
+}
+
+.settings-nav-btn {
+    font-weight: 500;
+}
+
+.settings-nav-btn.active {
+    transform: translateX(6px);
+}
+
+.settings-section h2 {
+    letter-spacing: 0.015em;
+    text-shadow: 0 0 24px rgba(146, 217, 255, 0.25);
+}
+
+.card-block {
+    backdrop-filter: blur(14px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(139, 212, 255, 0.14) inset;
+}
+
+.game-item {
+    overflow: hidden;
+}
+
+.game-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% 16%, rgba(196, 235, 255, 0.3), transparent 40%);
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.theme-selected-card {
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(146, 217, 255, 0.18) inset;
+}
+
+.btn-glass.primary {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.store-card {
+    backdrop-filter: blur(14px);
+}
+
+.store-card-title {
+    letter-spacing: 0.01em;
+}
+
+.quick-panel {
+    backdrop-filter: blur(18px);
+}
+
+.loading-poster-frame {
+    box-shadow: 0 0 0 1px rgba(164, 221, 255, 0.22), 0 18px 38px rgba(0, 0, 0, 0.48);
+}
+
+.loading-title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: calc(var(--loading-title-size, 24px) - 2px);
+}
+
+/* Position examples: move major blocks without touching HTML layout. */
+#home-header {
+    transform: translateY(-2px);
+}
+
+#home-carousel-area {
+    transform: translateY(4px);
+}
+
+#home-info-content {
+    max-width: 64%;
+}
+
+/* Fine tuning for cards, panels and controls via custom.css */
+.games-row {
+    align-items: flex-end;
+}
+
+.settings-nav-btn {
+    border-width: 1px;
+}
+
+.settings-content .card-block {
+    border-radius: calc(var(--settings-card-radius, 20px) + 2px);
+}
+
+input[type="range"] {
+    accent-color: #95d9ff;
+}

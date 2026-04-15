@@ -1,0 +1,7 @@
+﻿/* Store package example */
+#home-header {
+  transform: translateY(-4px);
+}
+.game-item {
+  border-radius: 30px;
+}

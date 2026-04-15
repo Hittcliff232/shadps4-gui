@@ -1,0 +1,20 @@
+﻿ShadPS4 Launcher by Hittcliff
+
+
+winexe
+C#
+.cs
+C:\Infamous Second Son\ShadPS4Launcher\obj\Release\net8.0-windows\
+ShadPS4Launcher
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Infamous Second Son\ShadPS4Launcher\App.xaml
+81499098985
+81906296274
+19-1802033241
+202-278335427
+AudioWindow.xaml;GeneralSettingsWindow.xaml;GraphicsWindow.xaml;InputWindow.xaml;LogsWindow.xaml;MainWindow.xaml;PathsWindow.xaml;Themes\Colors.xaml;
+
+False
+
