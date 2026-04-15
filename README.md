@@ -46,7 +46,3 @@ Output: `bin\Release\net8.0-windows\ShadPS4 Launcher by Hittcliff.exe`
 3. Click **Add game folder...** and choose a folder that contains PS4 game(s) (with `eboot.bin` and `sce_sys`).
 4. Select a game in the list, adjust **General / Graphics / Audio / Input** as needed.
 5. Click **Launch** or **Create desktop shortcut**.
-
-## Note
-
-- **NSP** is a Nintendo Switch format. For PS4 you use game folders (with eboot.bin) or PKG. The launcher’s “Add game folder” is the way to add/import such games.
