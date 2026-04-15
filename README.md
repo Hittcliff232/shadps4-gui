@@ -17,6 +17,9 @@ GUI launcher for the **shadPS4** emulator (CLI). Lets you manage games, set grap
 - **Addon folder** — Set DLC/addon path.
 - **All CLI options** — Fullscreen, patch file, override root, show FPS, ignore game patch, debugger wait, config mode, log append.
 
+<img width="3440" height="1440" alt="{2D7D0E6D-118B-43A0-B15A-F3B8ED8AAC4F}" src="https://github.com/user-attachments/assets/c612f2d5-dcdf-4a96-9fbf-d45de4bcfb7d" />
+<img width="3440" height="1440" alt="{BACB7566-FBE0-48B0-99A9-7EAB78A7E63F}" src="https://github.com/user-attachments/assets/97f85e29-c9d0-4d8f-b452-08fa6148843f" />
+
 ## Requirements
 
 - Windows 10/11
